@@ -25,7 +25,7 @@ export function Home () {
         })
         // set the books array as the data state
         setData(books)
-        console.log(books)
+        // console.log(books)
     }
 
     useEffect( () => {
@@ -34,9 +34,19 @@ export function Home () {
         }
     })
 
+    const Columns = data.map( (book) => {
+        return(
+            <Col md="4">
+                <h3>{book.title}</h3>
+            </Col>
+        )
+    })
+
     return (
-        <div>
-            <h1>Home</h1>
-        </div>
+       <Container>
+            <Row>
+                {Columns}
+            </Row>
+       </Container>
     )
 }
