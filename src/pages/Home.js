@@ -25,7 +25,14 @@ export function Home () {
         })
         // set the books array as the data state
         setData(books)
+        console.log(books)
     }
+
+    useEffect( () => {
+        if( data.length === 0 ) {
+            getData()
+        }
+    })
 
     return (
         <div>
