@@ -11,13 +11,14 @@ import { FBStorageContext } from '../contexts/FBStorageContext';
 import { AuthContext } from '../contexts/AuthContext';
 import { FBAuthContext } from '../contexts/FBAuthContext';
 
-import { doc, getDoc, addDoc, collection } from "firebase/firestore";
+import { doc, getDoc, addDoc, collection, getDocs } from "firebase/firestore";
 import { ref, getDownloadURL } from "firebase/storage";
 import { onAuthStateChanged } from "firebase/auth";
 
 export function Detail(props) {
   const [bookData, setBookData] = useState()
   const [auth, setAuth] = useState()
+  const [bookReviews, setBookReviews ] = useState([])
 
   let { bookId } = useParams()
 
@@ -36,12 +37,25 @@ export function Detail(props) {
     }
   })
 
+  const getReviews = async () => {
+    const path = `books/${bookId}/reviews`
+    const querySnapshot = await getDocs( collection(FBDb, path) )
+    let reviews = []
+    querySnapshot.forEach( (item) => {
+      let review = item.data()
+      review.id = item.id
+      reviews.push( review )
+    })
+    setBookReviews( reviews )
+  }
+
   const bookRef = doc(FBDb, "books", bookId)
 
   const getBook = async () => {
     let book = await getDoc(bookRef)
     if (book.exists()) {
       setBookData(book.data())
+      getReviews()
     }
     else {
       // no book exists with the ID
@@ -92,6 +106,9 @@ export function Detail(props) {
           <Col>
             <ReviewForm user={auth} handler={ReviewHandler} />
           </Col>
+        </Row>
+        <Row>
+          {/* reviews to appear here */}
         </Row>
       </Container>
     )
