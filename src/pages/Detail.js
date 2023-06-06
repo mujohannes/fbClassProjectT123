@@ -90,7 +90,7 @@ export function Detail(props) {
         </Row>
         <Row>
           <Col>
-            <ReviewForm user={auth} />
+            <ReviewForm user={auth} handler={ReviewHandler} />
           </Col>
         </Row>
       </Container>
