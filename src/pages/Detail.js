@@ -60,7 +60,7 @@ export function Detail(props) {
     getDownloadURL( imgRef ).then( (url) => setImgPath(url) )
 
     return(
-        <img src={imgPath} />
+        <img src={imgPath} className="img-fluid" />
     )
   }
 
@@ -68,12 +68,17 @@ export function Detail(props) {
   if (bookData) {
     return (
       <Container>
-        <Row>
-          <Col>
+        <Row className='my-3'>
+          <Col md="4">
             <Image path={bookData.image} />
           </Col>
-          <Col>
+          <Col md="8">
             <h2>{bookData.title}</h2>
+            <h4>{bookData.author} </h4>
+            <h5>{bookData.year}</h5>
+            <p>{bookData.summary}</p>
+            <p>ISBN {bookData.isbn10} <br/> ISBN13 {bookData.isbn13}</p>
+            <p>{bookData.pages} pages</p>
           </Col>
         </Row>
         <Row>
