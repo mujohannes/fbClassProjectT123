@@ -125,7 +125,7 @@ export function Detail(props) {
             <p>{bookData.pages} pages</p>
           </Col>
         </Row>
-        <Row>
+        <Row className="my-3">
           <Col md="4">
             <ReviewForm user={auth} handler={ReviewHandler} />
           </Col>
