@@ -347,3 +347,305 @@ You're about to initialize a Firebase project in this directory:
     at process.processTimers (node:internal/timers:512:7)
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2023-06-20T10:47:33.342Z] ----------------------------------------------------------------------
+[debug] [2023-06-20T10:47:33.344Z] Command:       C:\Users\jmuljana\AppData\Roaming\node\node.exe C:\Users\jmuljana\AppData\Roaming\node\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-20T10:47:33.344Z] CLI Version:   12.4.0
+[debug] [2023-06-20T10:47:33.344Z] Platform:      win32
+[debug] [2023-06-20T10:47:33.344Z] Node Version:  v18.16.0
+[debug] [2023-06-20T10:47:33.344Z] Time:          Tue Jun 20 2023 20:47:33 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2023-06-20T10:47:33.344Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-20T10:47:33.385Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-20T10:47:33.385Z] > authorizing via signed-in user (johannes.edu@gmail.com)
+[debug] [2023-06-20T10:47:33.385Z] [iam] checking project classproject-937e8 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-06-20T10:47:33.387Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions [none]
+[debug] [2023-06-20T10:47:33.387Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions x-goog-quota-user=projects/classproject-937e8
+[debug] [2023-06-20T10:47:33.387Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-06-20T10:47:34.403Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions 200
+[debug] [2023-06-20T10:47:34.403Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-06-20T10:47:34.405Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 [none]
+[debug] [2023-06-20T10:47:34.898Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 200
+[debug] [2023-06-20T10:47:34.898Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 {"projectId":"classproject-937e8","projectNumber":"669600973558","displayName":"classproject","name":"projects/classproject-937e8","resources":{"hostingSite":"classproject-937e8","storageBucket":"classproject-937e8.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_c7873c00-1d72-4bff-95e2-bbe9b55a0500"}
+[info] 
+[info] === Deploying to 'classproject-937e8'...
+[info] 
+[info] i  deploying storage, firestore, hosting 
+[debug] [2023-06-20T10:47:34.902Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 [none]
+[debug] [2023-06-20T10:47:35.394Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 200
+[debug] [2023-06-20T10:47:35.394Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 {"projectId":"classproject-937e8","projectNumber":"669600973558","displayName":"classproject","name":"projects/classproject-937e8","resources":{"hostingSite":"classproject-937e8","storageBucket":"classproject-937e8.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_c7873c00-1d72-4bff-95e2-bbe9b55a0500"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2023-06-20T10:47:35.395Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test [none]
+[debug] [2023-06-20T10:47:35.395Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test [omitted]
+[debug] [2023-06-20T10:47:36.849Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test 200
+[debug] [2023-06-20T10:47:36.850Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test {}
+[info] +  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2023-06-20T10:47:36.852Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test [none]
+[debug] [2023-06-20T10:47:36.852Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test [omitted]
+[debug] [2023-06-20T10:47:37.305Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test 200
+[debug] [2023-06-20T10:47:37.305Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2023-06-20T10:47:37.309Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions [none]
+[debug] [2023-06-20T10:47:37.309Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-20T10:47:38.987Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions 200
+[debug] [2023-06-20T10:47:38.987Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions {"name":"projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-20T10:47:56.256Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases pageSize=10&pageToken=
+[debug] [2023-06-20T10:47:56.734Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases 200
+[debug] [2023-06-20T10:47:56.734Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases {"releases":[{"name":"projects/classproject-937e8/releases/cloud.firestore","rulesetName":"projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f","createTime":"2023-05-16T10:30:45.740097Z","updateTime":"2023-06-20T10:37:19.581457Z"},{"name":"projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com","rulesetName":"projects/classproject-937e8/rulesets/9c4f6dd9-5b50-4ad3-a6c1-827243315381","createTime":"2023-05-23T08:25:42.916960Z","updateTime":"2023-06-20T10:41:22.020866Z"}]}
+[debug] [2023-06-20T10:47:56.741Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/9c4f6dd9-5b50-4ad3-a6c1-827243315381 [none]
+[debug] [2023-06-20T10:47:57.206Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/9c4f6dd9-5b50-4ad3-a6c1-827243315381 200
+[debug] [2023-06-20T10:47:57.206Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/9c4f6dd9-5b50-4ad3-a6c1-827243315381 [omitted]
+[debug] [2023-06-20T10:47:57.206Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 [none]
+[debug] [2023-06-20T10:47:57.687Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 200
+[debug] [2023-06-20T10:47:57.687Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 {"projectId":"classproject-937e8","projectNumber":"669600973558","displayName":"classproject","name":"projects/classproject-937e8","resources":{"hostingSite":"classproject-937e8","storageBucket":"classproject-937e8.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_c7873c00-1d72-4bff-95e2-bbe9b55a0500"}
+[debug] [2023-06-20T10:47:57.688Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/669600973558:getIamPolicy [none]
+[debug] [2023-06-20T10:47:58.819Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/669600973558:getIamPolicy 200
+[debug] [2023-06-20T10:47:58.819Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/669600973558:getIamPolicy {"version":1,"etag":"BwX+jTuq9a0=","bindings":[{"role":"roles/editor","members":["serviceAccount:classproject-937e8@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-669600973558@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-wr6pw@classproject-937e8.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-wr6pw@classproject-937e8.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.firestoreServiceAgent","members":["serviceAccount:service-669600973558@gcp-sa-firebasestorage.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-669600973558@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firebasestorage.serviceAgent","members":["serviceAccount:service-669600973558@gcp-sa-firebasestorage.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-669600973558@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-wr6pw@classproject-937e8.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:johannes.edu@gmail.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-669600973558@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/storage.admin","members":["serviceAccount:firebase-adminsdk-wr6pw@classproject-937e8.iam.gserviceaccount.com"]}]}
+[info] i  storage: uploading rules storage.rules... 
+[debug] [2023-06-20T10:47:58.821Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets [none]
+[debug] [2023-06-20T10:47:58.821Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets [omitted]
+[debug] [2023-06-20T10:48:00.329Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets 200
+[debug] [2023-06-20T10:48:00.329Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets {"name":"projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4","source":{"files":[{"content":"rules_version = '2';\n\n// Craft rules based on data in your Firestore database\n// allow write: if firestore.get(\n//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if false;\n    }\n  }\n}\n","name":"storage.rules"}]},"createTime":"2023-06-20T10:48:00.172111Z","metadata":{"services":["firebase.storage"]}}
+[debug] [2023-06-20T10:48:00.329Z] [rules] created ruleset projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4
+[info] i  firestore: deploying indexes... 
+[debug] [2023-06-20T10:48:00.331Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases pageSize=10&pageToken=
+[debug] [2023-06-20T10:48:00.331Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-06-20T10:48:00.672Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-06-20T10:48:00.672Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-06-20T10:48:00.672Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-06-20T10:48:00.819Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-06-20T10:48:00.819Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/classproject-937e8/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
+[debug] [2023-06-20T10:48:01.785Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases 200
+[debug] [2023-06-20T10:48:01.785Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases {"releases":[{"name":"projects/classproject-937e8/releases/cloud.firestore","rulesetName":"projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f","createTime":"2023-05-16T10:30:45.740097Z","updateTime":"2023-06-20T10:37:19.581457Z"},{"name":"projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com","rulesetName":"projects/classproject-937e8/rulesets/9c4f6dd9-5b50-4ad3-a6c1-827243315381","createTime":"2023-05-23T08:25:42.916960Z","updateTime":"2023-06-20T10:41:22.020866Z"}]}
+[debug] [2023-06-20T10:48:01.786Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f [none]
+[debug] [2023-06-20T10:48:03.246Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f 200
+[debug] [2023-06-20T10:48:03.247Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  hosting[classproject-937e8]: beginning deploy... 
+[info] i  hosting[classproject-937e8]: found 14 files in build 
+[debug] [2023-06-20T10:48:03.254Z] [hosting] uploading with 200 concurrency
+[debug] [2023-06-20T10:48:03.619Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2023-06-20T10:48:03.619Z] [hosting][hash queue][FINAL] {"max":357,"min":2,"avg":33.92857142857143,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":363}
+[debug] [2023-06-20T10:48:03.619Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09:populateFiles [none]
+[debug] [2023-06-20T10:48:03.619Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/index.html":"09409d9449d96f04da18736b25b8769c4873fd721ce0f838a467c046199ab356","/asset-manifest.json":"46f674f9bdc6caf552d26c61fae223b99a0970de967de4a17606854391ce1bec","/static/js/787.d0851b26.chunk.js":"5fc77ef22dc02514db3b30b49ded3111f8094d121ee25c3bcb9b236e8eae8728","/static/js/main.0876d2b3.js.LICENSE.txt":"8d7fb2d6e3b139810187fa7e72717f6126c55aa2aeaef48db9ecdccf77858c3b","/static/js/787.d0851b26.chunk.js.map":"f7a21ecbb33f19238060f87bf0f9e1da574954b2b920f6ac15d39edb4f6e718c","/static/css/main.7985d8d9.css":"706f5ee40228d17f2dd1f852f62c14e7ead1635a32e6e5a984d8ae70bda84335","/static/css/main.7985d8d9.css.map":"410af86251e8f30dfc975dde755546bb86945a0f88e8bf454fe1a23332796570","/static/js/main.0876d2b3.js":"d5ba8471f5c19bff4787ae4eaa42ecd8a1d52a0565bacd38efac5d985c9f53f5","/static/js/main.0876d2b3.js.map":"0a20b4eeddb7b2a1665bf26a5d401a20d66623bd4f44b1e3e78642850ab51bb2"}}
+[debug] [2023-06-20T10:48:05.007Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09:populateFiles 200
+[debug] [2023-06-20T10:48:05.007Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09:populateFiles {"uploadRequiredHashes":["09409d9449d96f04da18736b25b8769c4873fd721ce0f838a467c046199ab356"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/classproject-937e8/versions/a9f7c8d342a10c09/files"}
+[debug] [2023-06-20T10:48:05.008Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/classproject-937e8/versions/a9f7c8d342a10c09/files/09409d9449d96f04da18736b25b8769c4873fd721ce0f838a467c046199ab356 [none]
+[debug] [2023-06-20T10:48:05.008Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/classproject-937e8/versions/a9f7c8d342a10c09/files/09409d9449d96f04da18736b25b8769c4873fd721ce0f838a467c046199ab356 [stream]
+[debug] [2023-06-20T10:48:05.009Z] [hosting][populate queue][FINAL] {"max":1391,"min":1391,"avg":1391,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1392}
+[debug] [2023-06-20T10:48:05.009Z] [hosting] uploads queued: 1
+[debug] [2023-06-20T10:48:06.250Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/classproject-937e8/versions/a9f7c8d342a10c09/files/09409d9449d96f04da18736b25b8769c4873fd721ce0f838a467c046199ab356 200
+[debug] [2023-06-20T10:48:06.250Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/classproject-937e8/versions/a9f7c8d342a10c09/files/09409d9449d96f04da18736b25b8769c4873fd721ce0f838a467c046199ab356 [stream]
+[debug] [2023-06-20T10:48:06.250Z] [hosting][upload queue][FINAL] {"max":1243,"min":1243,"avg":1243,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1243}
+[info] +  hosting[classproject-937e8]: file upload complete 
+[debug] [2023-06-20T10:48:06.251Z] [hosting] deploy completed after 3003ms
+[debug] [2023-06-20T10:48:06.252Z] [rules] releasing firebase.storage/classproject-937e8.appspot.com with ruleset projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4
+[debug] [2023-06-20T10:48:06.252Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com [none]
+[debug] [2023-06-20T10:48:06.252Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com {"release":{"name":"projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com","rulesetName":"projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4"}}
+[debug] [2023-06-20T10:48:06.778Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com 200
+[debug] [2023-06-20T10:48:06.778Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com {"name":"projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com","rulesetName":"projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4","createTime":"2023-05-23T08:25:42.916960Z","updateTime":"2023-06-20T10:48:06.622572Z"}
+[debug] [2023-06-20T10:48:06.778Z] [rules] updated release projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com
+[info] +  storage: released rules storage.rules to firebase.storage 
+[debug] [2023-06-20T10:48:06.779Z] [rules] releasing cloud.firestore/(default) with ruleset projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f
+[debug] [2023-06-20T10:48:06.779Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/cloud.firestore/(default) [none]
+[debug] [2023-06-20T10:48:06.779Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/cloud.firestore/(default) {"release":{"name":"projects/classproject-937e8/releases/cloud.firestore/(default)","rulesetName":"projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f"}}
+[debug] [2023-06-20T10:48:08.291Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/cloud.firestore/(default) 200
+[debug] [2023-06-20T10:48:08.291Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/cloud.firestore/(default) {"name":"projects/classproject-937e8/releases/cloud.firestore","rulesetName":"projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f","createTime":"2023-05-16T10:30:45.740097Z","updateTime":"2023-06-20T10:48:08.136764Z"}
+[debug] [2023-06-20T10:48:08.291Z] [rules] updated release projects/classproject-937e8/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore 
+[debug] [2023-06-20T10:48:08.292Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "classproject-937e8"
+    },
+    "version": "projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09"
+  }
+]
+[info] i  hosting[classproject-937e8]: finalizing version... 
+[debug] [2023-06-20T10:48:08.293Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions/a9f7c8d342a10c09 updateMask=status%2Cconfig
+[debug] [2023-06-20T10:48:08.293Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions/a9f7c8d342a10c09 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-06-20T10:48:09.683Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions/a9f7c8d342a10c09 200
+[debug] [2023-06-20T10:48:09.683Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions/a9f7c8d342a10c09 {"name":"projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-20T10:47:38.531372Z","createUser":{"email":"johannes.edu@gmail.com"},"finalizeTime":"2023-06-20T10:48:09.525302Z","finalizeUser":{"email":"johannes.edu@gmail.com"}}
+[debug] [2023-06-20T10:48:09.683Z] [hosting] finalized version for classproject-937e8:[object Object]
+[info] +  hosting[classproject-937e8]: version finalized 
+[info] i  hosting[classproject-937e8]: releasing new version... 
+[debug] [2023-06-20T10:48:09.687Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/channels/live/releases versionName=projects%2F669600973558%2Fsites%2Fclassproject-937e8%2Fversions%2Fa9f7c8d342a10c09
+[debug] [2023-06-20T10:48:09.687Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/channels/live/releases {}
+[debug] [2023-06-20T10:48:11.071Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/channels/live/releases 200
+[debug] [2023-06-20T10:48:11.071Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/channels/live/releases {"name":"projects/669600973558/sites/classproject-937e8/channels/live/releases/1687258090325000","version":{"name":"projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-20T10:47:38.531372Z","createUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"},"finalizeTime":"2023-06-20T10:48:09.525302Z","finalizeUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"}},"type":"DEPLOY","releaseTime":"2023-06-20T10:48:10.325Z","releaseUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"}}
+[debug] [2023-06-20T10:48:11.071Z] [hosting] release: {"name":"projects/669600973558/sites/classproject-937e8/channels/live/releases/1687258090325000","version":{"name":"projects/669600973558/sites/classproject-937e8/versions/a9f7c8d342a10c09","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-20T10:47:38.531372Z","createUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"},"finalizeTime":"2023-06-20T10:48:09.525302Z","finalizeUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"}},"type":"DEPLOY","releaseTime":"2023-06-20T10:48:10.325Z","releaseUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"}}
+[info] +  hosting[classproject-937e8]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/classproject-937e8/overview
+[info] Hosting URL: https://classproject-937e8.web.app
+[debug] [2023-06-20T10:48:40.049Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\jmuljana\AppData\Roaming\node\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-06-20T10:48:56.809Z] ----------------------------------------------------------------------
+[debug] [2023-06-20T10:48:56.810Z] Command:       C:\Users\jmuljana\AppData\Roaming\node\node.exe C:\Users\jmuljana\AppData\Roaming\node\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-20T10:48:56.811Z] CLI Version:   12.4.0
+[debug] [2023-06-20T10:48:56.811Z] Platform:      win32
+[debug] [2023-06-20T10:48:56.811Z] Node Version:  v18.16.0
+[debug] [2023-06-20T10:48:56.811Z] Time:          Tue Jun 20 2023 20:48:56 GMT+1000 (Australian Eastern Standard Time)
+[debug] [2023-06-20T10:48:56.811Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-20T10:48:56.851Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-20T10:48:56.851Z] > authorizing via signed-in user (johannes.edu@gmail.com)
+[debug] [2023-06-20T10:48:56.851Z] [iam] checking project classproject-937e8 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-06-20T10:48:56.853Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions [none]
+[debug] [2023-06-20T10:48:56.853Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions x-goog-quota-user=projects/classproject-937e8
+[debug] [2023-06-20T10:48:56.853Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-06-20T10:48:57.869Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions 200
+[debug] [2023-06-20T10:48:57.870Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/classproject-937e8:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-06-20T10:48:57.871Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 [none]
+[debug] [2023-06-20T10:48:58.358Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 200
+[debug] [2023-06-20T10:48:58.359Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 {"projectId":"classproject-937e8","projectNumber":"669600973558","displayName":"classproject","name":"projects/classproject-937e8","resources":{"hostingSite":"classproject-937e8","storageBucket":"classproject-937e8.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_c7873c00-1d72-4bff-95e2-bbe9b55a0500"}
+[info] 
+[info] === Deploying to 'classproject-937e8'...
+[info] 
+[info] i  deploying storage, firestore, hosting 
+[debug] [2023-06-20T10:48:58.363Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 [none]
+[debug] [2023-06-20T10:48:58.845Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 200
+[debug] [2023-06-20T10:48:58.845Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 {"projectId":"classproject-937e8","projectNumber":"669600973558","displayName":"classproject","name":"projects/classproject-937e8","resources":{"hostingSite":"classproject-937e8","storageBucket":"classproject-937e8.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_c7873c00-1d72-4bff-95e2-bbe9b55a0500"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2023-06-20T10:48:58.855Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test [none]
+[debug] [2023-06-20T10:48:58.855Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test [omitted]
+[debug] [2023-06-20T10:49:00.299Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test 200
+[debug] [2023-06-20T10:49:00.299Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test {}
+[info] +  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2023-06-20T10:49:00.302Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test [none]
+[debug] [2023-06-20T10:49:00.302Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test [omitted]
+[debug] [2023-06-20T10:49:01.744Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test 200
+[debug] [2023-06-20T10:49:01.744Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2023-06-20T10:49:01.748Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions [none]
+[debug] [2023-06-20T10:49:01.748Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-20T10:49:03.982Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions 200
+[debug] [2023-06-20T10:49:03.982Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions {"name":"projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-20T10:49:20.699Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases pageSize=10&pageToken=
+[debug] [2023-06-20T10:49:22.178Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases 200
+[debug] [2023-06-20T10:49:22.178Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases {"releases":[{"name":"projects/classproject-937e8/releases/cloud.firestore","rulesetName":"projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f","createTime":"2023-05-16T10:30:45.740097Z","updateTime":"2023-06-20T10:48:08.136764Z"},{"name":"projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com","rulesetName":"projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4","createTime":"2023-05-23T08:25:42.916960Z","updateTime":"2023-06-20T10:48:06.622572Z"}]}
+[debug] [2023-06-20T10:49:22.189Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4 [none]
+[debug] [2023-06-20T10:49:22.655Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4 200
+[debug] [2023-06-20T10:49:22.655Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4 [omitted]
+[debug] [2023-06-20T10:49:22.657Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 [none]
+[debug] [2023-06-20T10:49:23.145Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 200
+[debug] [2023-06-20T10:49:23.146Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/classproject-937e8 {"projectId":"classproject-937e8","projectNumber":"669600973558","displayName":"classproject","name":"projects/classproject-937e8","resources":{"hostingSite":"classproject-937e8","storageBucket":"classproject-937e8.appspot.com","locationId":"australia-southeast1"},"state":"ACTIVE","etag":"1_c7873c00-1d72-4bff-95e2-bbe9b55a0500"}
+[debug] [2023-06-20T10:49:23.147Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/669600973558:getIamPolicy [none]
+[debug] [2023-06-20T10:49:23.820Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/669600973558:getIamPolicy 200
+[debug] [2023-06-20T10:49:23.820Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/669600973558:getIamPolicy {"version":1,"etag":"BwX+jTuq9a0=","bindings":[{"role":"roles/editor","members":["serviceAccount:classproject-937e8@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-669600973558@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-wr6pw@classproject-937e8.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-wr6pw@classproject-937e8.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.firestoreServiceAgent","members":["serviceAccount:service-669600973558@gcp-sa-firebasestorage.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-669600973558@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firebasestorage.serviceAgent","members":["serviceAccount:service-669600973558@gcp-sa-firebasestorage.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-669600973558@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-wr6pw@classproject-937e8.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:johannes.edu@gmail.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-669600973558@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/storage.admin","members":["serviceAccount:firebase-adminsdk-wr6pw@classproject-937e8.iam.gserviceaccount.com"]}]}
+[info] i  storage: uploading rules storage.rules... 
+[debug] [2023-06-20T10:49:23.822Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets [none]
+[debug] [2023-06-20T10:49:23.822Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets [omitted]
+[debug] [2023-06-20T10:49:25.345Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets 200
+[debug] [2023-06-20T10:49:25.345Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets {"name":"projects/classproject-937e8/rulesets/3e5d7fa9-fbde-4871-9264-fa856b3cddb1","source":{"files":[{"content":"rules_version = '2';\n\n// Craft rules based on data in your Firestore database\n// allow write: if firestore.get(\n//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if true;\n    }\n  }\n}\n","name":"storage.rules"}]},"createTime":"2023-06-20T10:49:25.186879Z","metadata":{"services":["firebase.storage"]}}
+[debug] [2023-06-20T10:49:25.345Z] [rules] created ruleset projects/classproject-937e8/rulesets/3e5d7fa9-fbde-4871-9264-fa856b3cddb1
+[info] i  firestore: deploying indexes... 
+[debug] [2023-06-20T10:49:25.347Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases pageSize=10&pageToken=
+[debug] [2023-06-20T10:49:25.349Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-06-20T10:49:25.591Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-06-20T10:49:25.591Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-06-20T10:49:25.591Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-06-20T10:49:25.831Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-06-20T10:49:25.832Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/classproject-937e8/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/classproject-937e8/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
+[debug] [2023-06-20T10:49:26.818Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases 200
+[debug] [2023-06-20T10:49:26.818Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases {"releases":[{"name":"projects/classproject-937e8/releases/cloud.firestore","rulesetName":"projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f","createTime":"2023-05-16T10:30:45.740097Z","updateTime":"2023-06-20T10:48:08.136764Z"},{"name":"projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com","rulesetName":"projects/classproject-937e8/rulesets/3f8c04e4-cf92-4d94-bbfb-7fff93d77cb4","createTime":"2023-05-23T08:25:42.916960Z","updateTime":"2023-06-20T10:48:06.622572Z"}]}
+[debug] [2023-06-20T10:49:26.819Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f [none]
+[debug] [2023-06-20T10:49:28.274Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f 200
+[debug] [2023-06-20T10:49:28.274Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[info] i  hosting[classproject-937e8]: beginning deploy... 
+[info] i  hosting[classproject-937e8]: found 14 files in build 
+[debug] [2023-06-20T10:49:28.282Z] [hosting] uploading with 200 concurrency
+[debug] [2023-06-20T10:49:28.285Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2023-06-20T10:49:28.285Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":2}
+[debug] [2023-06-20T10:49:28.285Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868:populateFiles [none]
+[debug] [2023-06-20T10:49:28.285Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868:populateFiles {"files":{"/asset-manifest.json":"46f674f9bdc6caf552d26c61fae223b99a0970de967de4a17606854391ce1bec","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/index.html":"09409d9449d96f04da18736b25b8769c4873fd721ce0f838a467c046199ab356","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/static/css/main.7985d8d9.css":"706f5ee40228d17f2dd1f852f62c14e7ead1635a32e6e5a984d8ae70bda84335","/static/css/main.7985d8d9.css.map":"410af86251e8f30dfc975dde755546bb86945a0f88e8bf454fe1a23332796570","/static/js/787.d0851b26.chunk.js":"5fc77ef22dc02514db3b30b49ded3111f8094d121ee25c3bcb9b236e8eae8728","/static/js/787.d0851b26.chunk.js.map":"f7a21ecbb33f19238060f87bf0f9e1da574954b2b920f6ac15d39edb4f6e718c","/static/js/main.0876d2b3.js":"d5ba8471f5c19bff4787ae4eaa42ecd8a1d52a0565bacd38efac5d985c9f53f5","/static/js/main.0876d2b3.js.LICENSE.txt":"8d7fb2d6e3b139810187fa7e72717f6126c55aa2aeaef48db9ecdccf77858c3b","/static/js/main.0876d2b3.js.map":"0a20b4eeddb7b2a1665bf26a5d401a20d66623bd4f44b1e3e78642850ab51bb2"}}
+[debug] [2023-06-20T10:49:29.497Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868:populateFiles 200
+[debug] [2023-06-20T10:49:29.497Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/classproject-937e8/versions/95ee72a28c3f5868/files"}
+[debug] [2023-06-20T10:49:29.497Z] [hosting][populate queue][FINAL] {"max":1213,"min":1213,"avg":1213,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1213}
+[debug] [2023-06-20T10:49:29.497Z] [hosting] uploads queued: 0
+[debug] [2023-06-20T10:49:29.497Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1687258169497}
+[info] +  hosting[classproject-937e8]: file upload complete 
+[debug] [2023-06-20T10:49:29.498Z] [hosting] deploy completed after 1222ms
+[debug] [2023-06-20T10:49:29.499Z] [rules] releasing firebase.storage/classproject-937e8.appspot.com with ruleset projects/classproject-937e8/rulesets/3e5d7fa9-fbde-4871-9264-fa856b3cddb1
+[debug] [2023-06-20T10:49:29.499Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com [none]
+[debug] [2023-06-20T10:49:29.499Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com {"release":{"name":"projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com","rulesetName":"projects/classproject-937e8/rulesets/3e5d7fa9-fbde-4871-9264-fa856b3cddb1"}}
+[debug] [2023-06-20T10:49:31.022Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com 200
+[debug] [2023-06-20T10:49:31.023Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com {"name":"projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com","rulesetName":"projects/classproject-937e8/rulesets/3e5d7fa9-fbde-4871-9264-fa856b3cddb1","createTime":"2023-05-23T08:25:42.916960Z","updateTime":"2023-06-20T10:49:30.867477Z"}
+[debug] [2023-06-20T10:49:31.023Z] [rules] updated release projects/classproject-937e8/releases/firebase.storage/classproject-937e8.appspot.com
+[info] +  storage: released rules storage.rules to firebase.storage 
+[debug] [2023-06-20T10:49:31.024Z] [rules] releasing cloud.firestore/(default) with ruleset projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f
+[debug] [2023-06-20T10:49:31.025Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/cloud.firestore/(default) [none]
+[debug] [2023-06-20T10:49:31.025Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/cloud.firestore/(default) {"release":{"name":"projects/classproject-937e8/releases/cloud.firestore/(default)","rulesetName":"projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f"}}
+[debug] [2023-06-20T10:49:32.578Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/cloud.firestore/(default) 200
+[debug] [2023-06-20T10:49:32.578Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/classproject-937e8/releases/cloud.firestore/(default) {"name":"projects/classproject-937e8/releases/cloud.firestore","rulesetName":"projects/classproject-937e8/rulesets/a0887a43-f773-45bb-85e9-987f5dd85c3f","createTime":"2023-05-16T10:30:45.740097Z","updateTime":"2023-06-20T10:49:32.416996Z"}
+[debug] [2023-06-20T10:49:32.578Z] [rules] updated release projects/classproject-937e8/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore 
+[debug] [2023-06-20T10:49:32.579Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "classproject-937e8"
+    },
+    "version": "projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868"
+  }
+]
+[info] i  hosting[classproject-937e8]: finalizing version... 
+[debug] [2023-06-20T10:49:32.582Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions/95ee72a28c3f5868 updateMask=status%2Cconfig
+[debug] [2023-06-20T10:49:32.582Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions/95ee72a28c3f5868 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-06-20T10:49:33.878Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions/95ee72a28c3f5868 200
+[debug] [2023-06-20T10:49:33.878Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/versions/95ee72a28c3f5868 {"name":"projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-20T10:49:03.524551Z","createUser":{"email":"johannes.edu@gmail.com"},"finalizeTime":"2023-06-20T10:49:33.713068Z","finalizeUser":{"email":"johannes.edu@gmail.com"}}
+[debug] [2023-06-20T10:49:33.879Z] [hosting] finalized version for classproject-937e8:[object Object]
+[info] +  hosting[classproject-937e8]: version finalized 
+[info] i  hosting[classproject-937e8]: releasing new version... 
+[debug] [2023-06-20T10:49:33.880Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/channels/live/releases versionName=projects%2F669600973558%2Fsites%2Fclassproject-937e8%2Fversions%2F95ee72a28c3f5868
+[debug] [2023-06-20T10:49:33.880Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/channels/live/releases {}
+[debug] [2023-06-20T10:49:35.163Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/channels/live/releases 200
+[debug] [2023-06-20T10:49:35.163Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/classproject-937e8/channels/live/releases {"name":"projects/669600973558/sites/classproject-937e8/channels/live/releases/1687258174407000","version":{"name":"projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-20T10:49:03.524551Z","createUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"},"finalizeTime":"2023-06-20T10:49:33.713068Z","finalizeUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"}},"type":"DEPLOY","releaseTime":"2023-06-20T10:49:34.407Z","releaseUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"}}
+[debug] [2023-06-20T10:49:35.163Z] [hosting] release: {"name":"projects/669600973558/sites/classproject-937e8/channels/live/releases/1687258174407000","version":{"name":"projects/669600973558/sites/classproject-937e8/versions/95ee72a28c3f5868","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-06-20T10:49:03.524551Z","createUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"},"finalizeTime":"2023-06-20T10:49:33.713068Z","finalizeUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"}},"type":"DEPLOY","releaseTime":"2023-06-20T10:49:34.407Z","releaseUser":{"email":"johannes.edu@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AAcHTtcoAIlA5UfD7ihkCVGHVNGNfhGYZbGDXJwK7IVK=mo"}}
+[info] +  hosting[classproject-937e8]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/classproject-937e8/overview
+[info] Hosting URL: https://classproject-937e8.web.app
+[debug] [2023-06-20T10:50:04.128Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\jmuljana\AppData\Roaming\node\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.

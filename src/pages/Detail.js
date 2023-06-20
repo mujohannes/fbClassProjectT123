@@ -21,6 +21,7 @@ export function Detail(props) {
   const [bookData, setBookData] = useState()
   const [auth, setAuth] = useState()
   const [bookReviews, setBookReviews] = useState([])
+  const [ reviewed, setReviewed ] = useState( false )
 
   let { bookId } = useParams()
 
@@ -47,6 +48,9 @@ export function Detail(props) {
       let review = item.data()
       review.id = item.id
       reviews.push(review)
+      if( review.userid === auth.uid ) {
+        setReviewed(true)
+      }
     })
     setBookReviews(reviews)
   }
@@ -127,7 +131,7 @@ export function Detail(props) {
         </Row>
         <Row className="my-3">
           <Col md="6">
-            <ReviewForm user={auth} handler={ReviewHandler} />
+            <ReviewForm user={auth} handler={ReviewHandler} reviewed={reviewed} />
           </Col>
         </Row>
         <Row>
